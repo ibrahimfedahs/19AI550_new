@@ -1,6 +1,6 @@
 # Ex.No: 4  Implementation of Kinematic movement -seek behavior in Unity
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 19-08-2025                                                                            
+### REGISTER NUMBER : 212223040166
 ### AIM: 
 To write a program to simulate the process of seek behavior in Unity without NavigationMeshAgent. 
 ### Algorithm:
@@ -28,11 +28,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Script : MonoBehaviour
+public class Seek : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform target;  // The object to seek
-    public float speed = 5f;  // Movement speed
+    public Transform target;  
+    public float speed ; 
     void Start()
     {
         
@@ -41,17 +41,39 @@ public class Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (target == null) return;  // Exit if no target is assigned
+       Vector3 direction = (target.position - transform.position).normalized;
+        transform.position += direction * speed * Time.deltaTime;
+    }
+}
+```
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-        // Calculate the desired direction
-        Vector3 direction = (target.position - transform.position).normalized;
+public class Flee : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public Transform target;  
+    public float speed ; 
+    void Start()
+    {
+        
+    }
 
-        // Move the object towards the target
+    // Update is called once per frame
+    void Update()
+    {
+       Vector3 direction = (transform.position - target.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
     }
 }
 ```
 ### Output:
+
+<img width="1920" height="1080" alt="AIF EX-04(1)" src="https://github.com/user-attachments/assets/a25101b1-53ab-4de8-8692-18e68486cd32" />
+
+<img width="1920" height="1080" alt="AIG EX-04" src="https://github.com/user-attachments/assets/b2762ebd-01c6-4ca0-870f-53b9d5302ee0" />
 
 
 
