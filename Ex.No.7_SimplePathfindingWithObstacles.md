@@ -1,6 +1,6 @@
 # Ex.No: 7  Implementation of Simple Pathfinding with Obstacles
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 12.11.2025                                                                          
+### REGISTER NUMBER : 212223240056
 ### AIM: 
 To write a program to pathfinding using AI navigation 
 ### Algorithm:
@@ -81,9 +81,7 @@ transform.position = startPos + new Vector3(movement, 0, 0);
 ### Output:
 
 
-
-
-
+<img width="1907" height="1015" alt="ai for games" src="https://github.com/user-attachments/assets/b14dad5c-983d-4368-8d73-ac8dd821555c" />
 
 
 
